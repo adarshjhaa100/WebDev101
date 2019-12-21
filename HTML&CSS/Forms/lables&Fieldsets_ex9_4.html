@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Labels and Fieldsets</title>
+</head>
+<body>
+    <form action="" method="post">
+        <h2>Implicit label</h2>
+        <label > 
+            Name<input type="text" name="Name" id="form-text-name">
+        </label>
+        <h2>Explicit label</h2>
+        <label for="form-mail">Enter mail id:</label>
+        <p>
+            Email: <input type="email" name="mail" id="form-mail">
+        </p>
+    </form>
+    <hr>
+    <h1>"Pimp My Shoes" Contest Entry Form:</h1>
+    <p>
+        Want to trade in your old sneakers for a custom pair of Forcefields?
+Make a case for why your shoes have got to go and you may be
+one of ten lucky winners.
+    </p>
+    <form action="https://www.learningwebdesign.com/contest.php" method="POST">
+    <p>Contest Entry Info</p>
+    <fieldset>
+        <legend>Contest Entry Info</legend>
+        <ul style="list-style-type: none;">
+        <li>
+            <label >
+            Name: <input type="text" name="username" id="form-name">
+        </label>
+        </li>
+
+        <li>
+            <label >
+            Email: <input type="email" name="emailaddress" id="form-email">
+        </label>
+        </li>
+        <li>
+            <label >
+            Phone: <input type="tel" name="telephone" id="t3">
+        </label>
+        </li>
+        <li> <label >Describe:
+            <textarea name="story" id="a1" cols="20" rows="5" 
+            placeholder="No more than 300 chars long"></textarea>  
+            </label>   
+        </li>
+    </ul>
+</fieldset>
+
+        <fieldset>
+            <legend>Custom Shoe Design</legend>
+            <fieldset>
+                <legend><em>Color(Choose one):</em></legend>
+        <ul style="list-style-type: none;">
+            <li>
+              <label>  (<input type="radio" name="color" value="red">)Red</label>
+            </li>
+            <li>
+               <label> (<input type="radio" name="color" value="blue">)Blue</label>
+            </li>
+
+            <li>
+              <label> (<input type="radio" name="color" value="black">)Black</label>
+            </li>
+
+            <li>
+                <label >(<input type="radio" name="color" value="silver">)Silver</label>
+            </li>
+        </ul>
+    </fieldset>
+    <p>
+        Features
+    </p> 
+        <fieldset>
+
+            <legend><em>Select Feature(At least one)</em></legend>   
+        <ul style="list-style-type: none;">
+            <li>
+               <label > [<input type="checkbox" name="features[]" value="sparkly laces">
+                ]Sparkly Laces</label>
+            </li>
+
+            <li>
+
+               <label > [<input type="checkbox" name="features[]" value="Metallic Logo" 
+                checked>]Metallic logo</label>
+            </li>
+
+            <li>
+              <label >  [<input type="checkbox" name="features[]" value="light-up heels">]
+                Light Up heels</label>
+            </li>
+
+            <li>
+               <label >[<input type="checkbox" name="features[]" value="mp3 enabled">]
+                Mp3-enabled</label>     
+            </li>
+        </ul>
+    </fieldset>
+
+        <fieldset><legend>Select size(5 through 13):</legend>
+
+        <p>
+            
+        <select name="size" >
+            <option >5</option>
+            <option >6</option>
+            <option >7</option>
+            <option >8</option>
+            <option >9</option>
+            <option >10</option>
+            <option >11</option>
+            <option >12</option>
+            <option >13</option>
+        </select>
+    </p>
+</fieldset>
+</fieldset>
+        <p>
+
+            <input type="submit" value="Pimp My Shoes!">
+            <input type= "reset" value="Reset">
+        </p>
+
+    
+    </form>
+</body>
+</html>

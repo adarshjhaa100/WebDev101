@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>An example of form</title>
+</head>
+<body>
+    <h1>A basic form example </h1>
+    <h2>Enter email and name</h2>
+
+    <form action="/mail.php" method="post">
+        
+            <ul style="list-style-type: none;">
+                <li>
+                    <label for="firstlast">Name:</label>
+                    <input type="text" name="username" id="firstlast">
+                </li>
+                <li>
+                    <label for="mail">Email:</label>
+                    <input type="email" name="email" id="mail">
+                </li>
+                
+            </ul>
+            <input type="submit" value="Submit">
+        
+    </form>
+    <hr>
+    
+    <h2>Control Elements</h2>
+    <form action="" method="post">
+        <h3>Single line text</h3>
+        <ul style="list-style-type: none;">
+             <li>
+                Name: <input type="text" name="username" id="single1" 
+                placeholder="name" maxlength="30">
+            </li>
+        </ul>
+        <h3>Multi Line text</h3>
+        <ul style="list-style-type: none;">
+            <li>
+                About You: <textarea name="about" id="area1" placeholder="abouturself"
+                cols="20" rows="5"></textarea>
+            </li>
+        </ul>
+        <input type="submit" value="SubmitYourWork">
+        <input type="reset" value="rewind">
+    </form>
+</body>
+</html>

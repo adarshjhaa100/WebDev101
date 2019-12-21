@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Menus (ex 9.3)</title>
+</head>
+<body>
+    <h1>Menus</h1>
+    <form action="" method="get">
+        <p>What is your fav band?(Drop Down)</p>
+        <select name="Eight" >
+        <option >
+            A
+        </option>   
+        
+        <option >
+            B
+        </option>   
+
+        <option >
+            C
+        </option>   
+
+        <option value="Next">
+            D
+        </option>   
+        </select>
+        <p>Scrolling Menu</p>
+        <select name="scrollit" size="6" multiple>
+            <option selected>
+                A
+            </option>
+            <option selected>
+                B
+            </option>    
+            <option >
+                C
+            </option>    
+            <option >
+                D
+            </option>    
+            <option selected>
+                E
+            </option>    
+            <option >
+                F
+            </option>
+            <option selected>
+                A
+            </option>
+        </select>
+        <p>group menu</p>
+        <select name="dsdsc" multiple>
+            <optgroup label="animal">
+                <option >Lion</option>
+                <option >Tiger</option>
+            </optgroup>
+            <optgroup label="Insect">
+                <option>Cockroach</option>
+                <option>Bed Bug</option>
+            </optgroup>
+        </select>
+    </form>
+    <hr>
+    <h1>"Pimp My Shoes" Contest Entry Form:</h1>
+    <p>
+        Want to trade in your old sneakers for a custom pair of Forcefields?
+Make a case for why your shoes have got to go and you may be
+one of ten lucky winners.
+    </p>
+    <form action="https://www.learningwebdesign.com/contest.php" method="POST">
+    <p>Contest Entry Info</p>
+    <ul style="list-style-type: none;">
+        <li>
+            Name: <input type="text" name="username" id="form-name">
+        </li>
+        <li>
+            Email: <input type="email" name="emailaddress" id="form-email">
+        </li>
+        <li>
+            Phone: <input type="tel" name="telephone" id="t3">
+        </li>
+        <li>
+            <textarea name="story" id="a1" cols="30" rows="10" 
+            placeholder="No more than 300 chars long"></textarea>     
+        </li>
+    </ul>
+    
+    <p>
+        Color(Check one)
+    </p>
+        <ul style="list-style-type: none;">
+            <li>
+                (<input type="radio" name="color" value="red">)Red
+            </li>
+            <li>
+                (<input type="radio" name="color" value="blue">)Blue
+            </li>
+
+            <li>
+               (<input type="radio" name="color" value="black">)Black
+            </li>
+
+            <li>
+                (<input type="radio" name="color" value="silver">)Silver
+            </li>
+        </ul>
+    <p>
+        Features
+    </p>    
+        <ul style="list-style-type: none;">
+            <li>
+                [<input type="checkbox" name="features[]" value="sparkly laces">]Sparkly Laces
+            </li>
+
+            <li>
+
+                [<input type="checkbox" name="features[]" value="Metallic Logo" checked>]Metallic logo
+            </li>
+
+            <li>
+                [<input type="checkbox" name="features[]" value="light-up heels">]Light Up heels
+            </li>
+
+            <li>
+                [<input type="checkbox" name="features[]" value="mp3 enabled">]Mp3-enabled
+            </li>
+        </ul>
+        <p>
+            Select size(5 through 13):
+        <select name="size" >
+            <option >5</option>
+            <option >6</option>
+            <option >7</option>
+            <option >8</option>
+            <option >9</option>
+            <option >10</option>
+            <option >11</option>
+            <option >12</option>
+            <option >13</option>
+        </select>
+    </p>
+        <p>
+
+            <input type="submit" value="Pimp My Shoes!">
+            <input type= "reset" value="Reset">
+        </p>
+    
+    </form>
+</body>
+</html>
