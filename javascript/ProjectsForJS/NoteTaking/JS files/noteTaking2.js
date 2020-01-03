@@ -6,6 +6,7 @@ let btnAdd = document.getElementById("btnAdd");
 //console.log(givenTxt,btnAdd);
 btnAdd.addEventListener("click", function(e) {
   let givenTxt = document.getElementById("txtAdd");
+  let theTitle1=document.getElementById("title1");
   let notes = localStorage.getItem("notes");
   let notesObj;
   if (notes == null) {
@@ -13,10 +14,15 @@ btnAdd.addEventListener("click", function(e) {
   } else {
     notesObj = JSON.parse(notes);
   }
-  if (givenTxt.value !== "") notesObj.push(givenTxt.value);
+  let ele={ 
+      theTitle:theTitle1.value,
+      theVal:givenTxt.value
+  };
+  if (givenTxt.value !== "") notesObj.push(ele);
 
   localStorage.setItem("notes", JSON.stringify(notesObj));
   givenTxt.value = "";
+  theTitle1.value="";
   showNote();
 });
 
@@ -33,8 +39,8 @@ function showNote() {
     notes.forEach(function(element, index) {
       htmlCode += `<div class="card my-2 mx-2" style="width: 18rem;">
         <div class="card-body">
-          <h5 class="card-title">Note#${index + 1}</h5>
-          <p class="card-text" >${element}</p>
+          <h5 class="card-title">${element.theTitle}</h5>
+          <p class="card-text" >${element.theVal}</p>
           <button class="btn btn-primary" onclick="deleteNode(this.id)" id="${index}">Delete</button >
         </div>
       </div>`;
@@ -63,9 +69,11 @@ search.addEventListener('input',function(e){
     let cardCollection=document.getElementsByClassName('card my-2 mx-2');
     //console.log(Array.from(cardCollection));
     Array.from(cardCollection).forEach(function(element){ 
+        //console.log();
         //console.log(element);
         //console.log((element.getElementsByTagName('p')[0].innerText));
-        if(element.getElementsByTagName('p')[0].innerText.includes(ipText))
+        if(element.getElementsByTagName('p')[0].innerText.includes(ipText)
+        ||element.getElementsByTagName('h5')[0].innerText.includes(ipText))
         {
             element.style.display='block';
         }
